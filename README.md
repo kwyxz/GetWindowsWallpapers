@@ -1,5 +1,5 @@
-GetWallpapers.ps1
-=================
+GetWindowsWallpapers
+====================
 
 Why this script
 ---------------
@@ -9,18 +9,21 @@ Windows 10 does download automatically amazing pictures for the login and lock s
 What does it do
 ---------------
 
-This script looks for HD (1920x1080) pictures within Windows' "hidden" download folder and copies it over to the user's Home in a configurable folder (by default "Pictures\Saved Pictures")
+This script looks for HD (1920x1080) pictures within Windows' "hidden" download folder and copies them over to the user's Home in a configurable folder (by default "Pictures\Saved Pictures")
 
 How to use
 ----------
 
-If needed, edit the $image_dest folder in the configuration section of the script
+If needed, edit the `$image_dest` folder in the configuration section of the script
 
-Then right-click on GetWallpapers.ps1 and choose "Run with Powershell"
+Then right-click on `GetWindowsWallpapers.ps1` and choose *Run with Powershell*
 
 Simply point your wallpaper Slideshow to this folder from your Personalization options in the Settings menu and enjoy your beautiful HD wallpapers!
 
 Optional
 --------
 
-I recommend creating a scheduled task that will run this copy upon every system start up with the line "powershell.exe -file [location of the script]\GetWallpapers.ps1"
+I recommend creating a scheduled task that will run this copy upon every system start up with the line
+```
+powershell.exe -file [location of the script]\GetWallpapers.ps1
+```
