@@ -27,3 +27,8 @@ I recommend creating a scheduled task that will run this copy upon every system 
 ```
 powershell.exe -file [location of the script]\GetWallpapers.ps1
 ```
+
+But it's terrible code!
+-----------------------
+
+That's very possible. It's the first time I ever code anything in Powershell. So there are good chances it's horrible and full of bad practice. But it does the job.
