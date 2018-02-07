@@ -4,7 +4,7 @@ GetWindowsWallpapers
 Why this script
 ---------------
 
-Windows 10 does download automatically amazing pictures for the login and lock screen, but Microsoft wants you to spend money on theme files so they've hidden the location of these files. They also frequently remove and replace them.
+Windows 10 does download automatically amazing pictures for the login and lock screen, but Microsoft wants you to spend money on themes so they've hidden the location of these files. They also frequently remove and replace them.
 
 What does it do
 ---------------
