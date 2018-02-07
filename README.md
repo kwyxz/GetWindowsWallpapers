@@ -16,9 +16,11 @@ How to use
 
 If needed, edit the $image_dest folder in the configuration section of the script
 
+Then right-click on GetWallpapers.ps1 and choose "Run with Powershell"
+
 Simply point your wallpaper Slideshow to this folder from your Personalization options in the Settings menu and enjoy your beautiful HD wallpapers!
 
 Optional
 --------
 
-I recommend creating a scheduled task that will run this copy upon every system start up.
+I recommend creating a scheduled task that will run this copy upon every system start up with the line "powershell.exe -file [location of the script]\GetWallpapers.ps1"
