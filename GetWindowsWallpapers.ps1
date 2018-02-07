@@ -25,6 +25,8 @@ foreach ($item in Get-ChildItem -Path $image_src) {
 	        }
 		# copy the picture
 		$destination = $image_dest + "\" + $item.Name + ".jpg"
-		Copy-Item -Force $item.FullName $destination
+		if (!(Test-Path $destination)) {
+			Copy-Item $item.FullName $destination
+		}
 	}
 }
