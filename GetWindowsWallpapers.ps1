@@ -17,15 +17,14 @@ foreach ($item in Get-ChildItem -Path $image_src) {
 	} finally {
 		$image.Dispose()
 	}
-
 	# check if the picture dimensions are 1920x1080
 	if ($imagewidth -eq 1920 -and $imageheight -eq 1080) {
 	# if the destination folder does not exist create it
-        if (!(Test-Path $image_dest)) {
-            New-Item $image_dest -ItemType Directory
-        }
+        	if (!(Test-Path $image_dest)) {
+	        	New-Item $image_dest -ItemType Directory
+	        }
 		# copy the picture
 		$destination = $image_dest + "\" + $item.Name + ".jpg"
 		Copy-Item -Force $item.FullName $destination
-    }
+	}
 }
