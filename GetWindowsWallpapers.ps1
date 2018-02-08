@@ -27,7 +27,6 @@ foreach ($item in Get-ChildItem -Path $image_src) {
 	        	New-Item $image_dest -ItemType Directory
 	        }
 		# copy the picture
-		Write-Output $hash
 		$destination = $image_dest + "\" + $hash + ".jpg"
 		if (!(Test-Path $destination)) {
 			Copy-Item $item.FullName $destination
