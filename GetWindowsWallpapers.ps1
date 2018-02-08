@@ -14,8 +14,11 @@ foreach ($item in Get-ChildItem -Path $image_src) {
 		$image = New-Object System.Drawing.Bitmap $item.FullName
 		$imagewidth = $image.Width
 		$imageheight = $image.Height
+		$md5 = New-Object -TypeName System.Security.Cryptography.MD5CryptoServiceProvider
+		$hash = [System.BitConverter]::ToString($md5.ComputeHash([System.IO.File]::ReadAllBytes($item.FullName)))
 	} finally {
 		$image.Dispose()
+		$md5.Dispose()
 	}
 	# check if the picture dimensions are 1920x1080
 	if ($imagewidth -eq 1920 -and $imageheight -eq 1080) {
@@ -24,7 +27,8 @@ foreach ($item in Get-ChildItem -Path $image_src) {
 	        	New-Item $image_dest -ItemType Directory
 	        }
 		# copy the picture
-		$destination = $image_dest + "\" + $item.Name + ".jpg"
+		Write-Output $hash
+		$destination = $image_dest + "\" + $hash + ".jpg"
 		if (!(Test-Path $destination)) {
 			Copy-Item $item.FullName $destination
 		}
